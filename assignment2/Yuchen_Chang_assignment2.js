@@ -5,11 +5,17 @@ const itemsObject = [
 ];
 
 // ● Given the array, implement a function for generating a new array which doubles the quantity and price in each object.
-const doubleItems = itemsObject.map((item) => {
-  const doubleItemsQty = item.quantity * 2;
-  const doubleItemsPrice = item.price * 2;
-  return { quantity: doubleItemsQty, price: doubleItemsPrice };
+// const doubleItems = itemsObject.map((item) => {
+//   const doubleItemsQty = item.quantity * 2;
+//   const doubleItemsPrice = item.price * 2;
+//   return { quantity: doubleItemsQty, price: doubleItemsPrice };
+// });
+
+//or
+const doubleItems = itemsObject.map(({ quantity, price }) => {
+  return { quantity: quantity * 2, price: price * 2 };
 });
+
 console.log(doubleItems);
 
 console.log("---------------------------------");
@@ -22,7 +28,7 @@ console.log(filteredItems);
 console.log("---------------------------------");
 // ● Given the array, implement a function to calculate the total value of the items.
 const itemsTotal = itemsObject.reduce((curTotal, item) => {
-  return curTotal + item.price;
+  return curTotal + item.price * item.quantity;
 }, 0);
 console.log(itemsTotal);
 
