@@ -11,7 +11,7 @@ const itemsObject = [
 //   return { quantity: doubleItemsQty, price: doubleItemsPrice };
 // });
 
-//or
+//or destructure
 const doubleItems = itemsObject.map(({ quantity, price }) => {
   return { quantity: quantity * 2, price: price * 2 };
 });
