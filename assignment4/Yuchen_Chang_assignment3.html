@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>TodoApp</title>
+  </head>
+
+  <body>
+    <!-- put your html elements here -->
+    <main class="main">
+      <section class="todolist">
+        <header class="todolist__header">
+          <h1 class="todolist__title todolist__row">TodoList</h1>
+          <div class="todolist__row todolist__input-wrap">
+            <input
+              type="text"
+              class="todolist__input"
+              placeholder="Enter Todo Here..."
+            />
+            <button class="btn btn-add">Add</button>
+          </div>
+        </header>
+        <ol class="todolist__content"></ol>
+      </section>
+    </main>
+    <script type="module" src="todoApp.js"></script>
+  </body>
+</html>
